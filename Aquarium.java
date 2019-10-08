@@ -54,7 +54,7 @@ public class Aquarium
         if (height > 0)
             myHeight = height;
         else
-            myHeight = 480;
+            myHeight = 800;
 
         borderPadding = 10;
 
