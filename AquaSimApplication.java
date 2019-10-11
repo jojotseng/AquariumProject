@@ -58,8 +58,9 @@ public class AquaSimApplication
         // the simulation.  The user interface needs to know about the
         // aquarium, so we pass aqua to the user interface constructor.
         AquaSimGUI userInterface;              // create reference to GUI ...
-        userInterface = new AquaSimGUI(aqua);  // ... and then GUI itself
-
+        userInterface = new AquaSimGUI(aqua,true);  // ... and then GUI itself
+        
+        
         // Tell the user how to start the aquarium simulation.
         System.out.println("Press the Start button to start the simulation.");
 
@@ -71,11 +72,16 @@ public class AquaSimApplication
 
 
         // RUN THE AQUARIUM SIMULATION.
+        
 
+        
+ 
+        
         // Make the fish move and redisplay.
         //      CODE MISSING HERE!
-
-            
+        
+for(int steps=0; steps<userInterface.getNumberOfSteps(); steps++)
+{
         if(carti.atWall())
             carti.changeDir();
             carti.moveForward();
@@ -91,7 +97,7 @@ public class AquaSimApplication
             mimi.moveForward();
             userInterface.showAquarium();
         
-            
+        }
         // WRAP UP.
 
         // Remind user how to quit application.
